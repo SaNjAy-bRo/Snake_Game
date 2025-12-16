@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Vintage Snake</title>
+</head>
+
+<body>
+  <div id="main-wrapper">
+    <div id="score-panel">
+      <div class="score-box">SCORE: <span id="score">0000</span></div>
+      <div class="title-logo">SNAKE_OS</div>
+      <div class="score-box">HIGH: <span id="high-score">0000</span></div>
+    </div>
+
+    <div id="game-container">
+      <div id="scanline-overlay"></div>
+      <div id="ui-layer">
+        <!-- Removed score-board from here -->
+        <div id="start-screen" class="visible">
+          <h1>SNAKE_OS v1.0</h1>
+
+          <div class="instruction-panel">
+            <img src="/assets/instructor.png" alt="Snake Instructor" class="instructor-img">
+            <div class="instructions">
+              <h2>HOW TO PLAY</h2>
+              <ul>
+                <li><span class="key">ARROWS / SWIPE</span> to Move</li>
+                <li>Eat <span class="red-apple">RED APPLES</span> for <span class="highlight">10 PTS</span></li>
+                <li>Catch <span class="gold-apple">GOLD APPLES</span> for <span class="highlight">50 PTS</span>!</li>
+                <li>Don't hit walls or yourself!</li>
+              </ul>
+              <div class="credits">Created by <span class="author">5anjoker</span></div>
+            </div>
+          </div>
+
+          <button id="start-btn">INSERT COIN (START)</button>
+        </div>
+        <div id="game-over-screen" class="hidden">
+          <h1>GAME OVER</h1>
+          <div class="dizzy-container">
+            <img src="/assets/dizzy_snake.png" alt="Dizzy Snake" class="dizzy-img">
+            <div class="stars">
+              <span class="star s1">✦</span>
+              <span class="star s2">✦</span>
+              <span class="star s3">✦</span>
+            </div>
+          </div>
+          <p>SCORE: <span id="final-score">0</span></p>
+          <button id="restart-btn">TRY AGAIN</button>
+        </div>
+      </div>
+      <canvas id="game-canvas"></canvas>
+    </div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
